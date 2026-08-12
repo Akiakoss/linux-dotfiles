@@ -1,0 +1,12 @@
+[Unit]
+Description=Set OpenRGB color after resume
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 3
+ExecStart=/usr/bin/openrgb --device 0 --mode Static --color FF2F00
+User=akos
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable GPP0 as a wake source
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'echo GPP0 > /proc/acpi/wakeup'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+// HIDE PASSWORD MANAGER(S) FROM SCREENSHARE
+
+window-rule {
+    match app-id=r#"^Bitwarden$"#
+
+    block-out-from "screen-capture"
+}
+
+// MOVE WALLPAPER TO OVERVIEW
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}

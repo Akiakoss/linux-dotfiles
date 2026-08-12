@@ -1,0 +1,20 @@
+# Position and Layout
+anchor=top-right
+font=JetBrainsMono Nerd Font 10
+width=320
+height=110
+margin=10
+padding=12
+border-size=2
+border-radius=8
+default-timeout=5000
+
+# Colors (Matching your warm amber theme)
+background-color=#231b15
+text-color=#f5e0dc
+border-color=#e4963c
+progress-color=over #e4963c
+
+[urgency=high]
+border-color=#e06c60
+default-timeout=0

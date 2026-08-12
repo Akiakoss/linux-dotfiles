@@ -1,0 +1,13 @@
+// DISPLAYS
+
+output "DP-3" {
+    mode "1920x1200@59.950"
+    transform "90"
+    scale 1
+}
+
+output "DP-2" {
+    mode "1920x1080@180.003"
+    transform "normal"
+    scale 1
+}

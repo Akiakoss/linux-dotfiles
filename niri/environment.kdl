@@ -1,0 +1,15 @@
+// ENVIRONMENT VARIABLES
+
+environment {
+    // Standard XCursor settings
+    XCURSOR_THEME "Bibata-Modern-Ice"
+    XCURSOR_SIZE "24"
+
+    // GTK cursor theme overrides
+    GTK_CURSOR_THEME "Bibata-Modern-Ice"
+    GTK_CURSOR_SIZE "24"
+
+    // Forces Wayland backend for Electron/Chromium apps
+    NIXOS_OZONE_WL "1"
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
+}

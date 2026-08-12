@@ -1,0 +1,11 @@
+// STARUP APPS
+
+spawn-at-startup "waybar"
+
+spawn-sh-at-startup "/usr/bin/swaybg -m fill -i /home/akos/.config/background"
+
+// DISABLE HOTKEY POPUP
+
+hotkey-overlay {
+    skip-at-startup
+}

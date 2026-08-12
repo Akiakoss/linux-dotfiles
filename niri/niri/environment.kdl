@@ -1,0 +1,17 @@
+  /////////////////////////////////////
+ /////   ENVIRONMENT VARIABLES   /////
+/////////////////////////////////////
+
+environment {
+    // XCURSOR theme
+    XCURSOR_THEME "Bibata-Modern-Ice"
+    XCURSOR_SIZE "24"
+
+    // GTK Cursor theme
+    GTK_CURSOR_THEME "Bibata-Modern-Ice"
+    GTK_CURSOR_SIZE "24"
+
+    // Forces Wayland backend for Electron/Chromium apps (ai wanted to add this)
+    NIXOS_OZONE_WL "1"
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
+}

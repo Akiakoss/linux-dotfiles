@@ -1,5 +1,8 @@
-// LAYOUT
+  //////////////////////////
+ /////   APPEARANCE   /////
+//////////////////////////
 
+// Layout
 layout {
     gaps 10
 
@@ -17,45 +20,37 @@ layout {
         proportion 0.66667
     }
 
+    // Focus ring
     focus-ring {
         width 1
 
-        active-gradient from="#e4963cff" to="#795022ff" angle=45
-        inactive-color "#505050"
+        active-gradient from="#e4963cff" to="#1a120b" angle=145
+        inactive-color "#1a120b"
     }
 
+    // This makes it so that the wallpaper passes through from the overview
     background-color "transparent"
 }
 
-// ANIMATIONS
+// Overview settings
+overview {
+    workspace-shadow {
+        off
+    }
+    zoom 0.80
+}
 
+// Animations (i just left this here idk why)
 animations {
 
 }
 
-// BLUR SETTINGS
-
-blur {
-    passes 3
-    offset 3
-    noise 0.02
-    saturation 1.5
-}
-
-// ROUNDED CORNERS
-
+// Making specific windows transparent and adding blur
 window-rule {
-    geometry-corner-radius 8
-    clip-to-geometry true
-}
-
-// BLUR ON WINDOWS
-
-window-rule {
-    match app-id=r#"^(brave-browser|vesktop|codium|spotify|org\.gnome\.Nautilus|org.pulseaudio.pavucontrol|org.prismlauncher.PrismLauncher|Bitwarden|com.obsproject.Studio|io.missioncenter.MissionCenter)$"#
+    match app-id=r#"^(brave-browser|vesktop|codium|spotify|org\.gnome\.Nautilus|org.pulseaudio.pavucontrol|org.prismlauncher.PrismLauncher|Bitwarden|com.obsproject.Studio|io.missioncenter.MissionCenter|brave-nngceckbapebfimnlniiiahkandclblb-Default)$"#
 
     draw-border-with-background false // removes the rectangle (focus ring) from apps
-    opacity 0.9
+    opacity 0.88
 
     background-effect {
         blur true
@@ -65,8 +60,35 @@ window-rule {
     }
 }
 
-// CURSOR THEME
+layer-rule {
+    match namespace="^launcher$"
 
+    background-effect {
+        blur true
+        xray false
+        noise 0.02
+        saturation 1
+    }
+}
+
+// Blur settings
+blur {
+    passes 3
+    offset 3
+    noise 0.02
+    saturation 1.5
+}
+
+// Rounded corners on windows
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+
+// Disables window decorations
+prefer-no-csd
+
+// Cursor theme (also set in envinronment.kdl)
 cursor {
     xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 24
@@ -74,17 +96,3 @@ cursor {
     hide-when-typing
     hide-after-inactive-ms 1000
 }
-
-
-// OVERVIEW SETTINGS
-
-overview {
-    workspace-shadow {
-        off
-    }
-    zoom 0.80
-}
-
-// DISABLE WINDOW DECORATIONS
-
-prefer-no-csd

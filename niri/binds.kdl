@@ -1,4 +1,6 @@
-// BINDS
+  ///////////////////////
+ //////   BINDS   //////
+///////////////////////
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }

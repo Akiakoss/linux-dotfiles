@@ -1,11 +1,17 @@
-// STARUP APPS
+  ///////////////////////////
+ /////   STARUP APPS   /////
+///////////////////////////
 
+// Start waybar on startup
 spawn-at-startup "waybar"
 
+// Set wallpaper on startup
 spawn-sh-at-startup "/usr/bin/swaybg -m fill -i /home/akos/.config/background"
 
-// DISABLE HOTKEY POPUP
+// Turn off monitors and lock on idle for 
+spawn-sh-at-startup "/usr/bin/swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f' before-sleep 'swaylock -f'"
 
+// DISABLE HOTKEY POPUP
 hotkey-overlay {
     skip-at-startup
 }

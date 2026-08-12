@@ -1,13 +1,14 @@
-// DISPLAYS
+  ////////////////////////
+ /////   MONITORS   /////
+////////////////////////
 
+// DELL P2421
 output "DP-3" {
-    mode "1920x1200@59.950"
+    mode "1920x1200@59.300"
     transform "90"
-    scale 1
 }
 
+// AOC 24G4X
 output "DP-2" {
     mode "1920x1080@180.003"
-    transform "normal"
-    scale 1
 }
